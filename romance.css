@@ -129,3 +129,10 @@ body{background:#100b0c}.hero{padding:0 0 36px;min-height:0;background:#100b0c}.
 
 /* Keep the full cinematic inspiration frames visible. */
 .prompt-art{aspect-ratio:1672/941;min-height:0}
+/* Neutral partner area lets each brand retain its own colors. */
+.partner{background:#151515;border:1px solid #3a3a3a;box-shadow:none;border-radius:14px}
+.partner .logos{align-items:stretch;gap:18px}
+.partner .logo,.partner .logo.light{background:#242424;border:1px solid #424242;border-radius:9px;height:100px;padding:20px 24px}
+.partner h3{color:#f5f3ef}
+.partner p{color:#c6c4c1}
+@media(max-width:680px){.partner .logo,.partner .logo.light{height:88px}}
