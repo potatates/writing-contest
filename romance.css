@@ -215,3 +215,33 @@ body{background:#100b0c}.hero{padding:0 0 36px;min-height:0;background:#100b0c}.
 .partner .logo,.partner .logo.light{background:transparent;border:0;box-shadow:none;border-radius:0}
 .partner{background:transparent;border:0;box-shadow:none}
 @media(max-width:520px){.glance{padding:22px 20px}.glance dt{font-size:13px}.glance dd,.glance .big{font-size:clamp(17px,4.6vw,22px)}.glance dl{gap:22px 16px}}
+/* Charcoal, champagne and gold: clear information without brown fills. */
+.glance{background:#101013;border:1px solid #8a704a;box-shadow:0 12px 35px #0005,inset 0 1px #e2be6d1a}
+.glance dt{color:#d7b878;font-weight:600;letter-spacing:.025em}
+.glance dd,.glance .big{color:#f3ead8;font-weight:600}
+#calendar .track,#calendar .track.long{background:#111114!important;border:1px solid #55545c!important;box-shadow:0 10px 30px #0003!important;border-radius:10px!important}
+#calendar .track .th,#calendar .track.long .th{background:#1b1b20;border-bottom:1px solid #6c5a3e;padding:24px 28px 22px}
+#calendar .track h3{color:#f2d79b;font-weight:500}
+#calendar .track .len{color:#e2e2e7;font-size:15px}
+#calendar .track .in{background:#111114}
+#calendar .when li{border-color:#3f3f47}
+#calendar .when li span{color:#d2d3dc}
+#calendar .when li b{color:#f6e6bd;font-weight:600}
+#calendar .track .note{color:#dedee5;line-height:1.65}
+/* The artwork is the panel, with copy layered directly across a dark vignette. */
+#inspiration .prompts>.prompt,#inspiration .prompts>.prompt:last-child:nth-child(odd){display:block;background:#09090c;border:1px solid #7f6447;border-radius:10px;min-height:490px}
+.prompt-visual{position:absolute;inset:0;display:block;min-height:0;background:none;z-index:0;overflow:hidden;isolation:auto}
+.prompt-visual:before{display:none}
+#inspiration .prompt-art{position:absolute;inset:0;width:100%;height:100%;max-width:none;aspect-ratio:auto;object-fit:cover;object-position:center;mask-image:none;margin:0;border:0}
+.prompt-visual:after{background:linear-gradient(90deg,#09090c00 0%,#09090c0d 23%,#09090c88 40%,#09090cee 55%,#09090cf5 75%,#09090cfa 100%);inset:0}
+.prompt-copy{position:relative;z-index:1;width:57%;margin-left:43%;padding:34px 35px 32px 26px;background:none;text-shadow:0 1px 3px #0009}
+#inspiration .prompt .pn{color:#e2bd7b;font-size:33px}
+#inspiration .prompt h4{color:#fff2d6;font-size:30px;line-height:1.25}
+#inspiration .prompt .pt{color:#efc5ba;font-size:11px}
+#inspiration .prompt p{color:#f2eee7;font-size:14px;line-height:1.8}
+@media(max-width:820px){#inspiration .prompts>.prompt,#inspiration .prompts>.prompt:last-child:nth-child(odd){display:block;min-height:0}.prompt-visual{position:absolute;inset:0;min-height:0}.prompt-visual:after{background:linear-gradient(180deg,#09090c00 0px,#09090c11 120px,#09090c99 210px,#09090cf2 300px,#09090c 360px)}#inspiration .prompt-art{position:absolute;inset:0 auto auto 0;width:100%;height:360px;object-fit:cover;object-position:center;mask-image:none}.prompt-copy{width:100%;margin:0;padding:235px 26px 30px;background:none}#inspiration .prompt .pn{font-size:29px}#inspiration .prompt h4{font-size:28px}}
+@media(max-width:520px){#calendar .track .th{padding:22px}#calendar .track .in{padding:8px 22px 22px}#calendar .when li{gap:12px}#calendar .when li b{font-size:14px}#calendar .when li span{font-size:14px}.prompt-copy{padding-left:23px;padding-right:23px}#inspiration .prompt p{font-size:14px;line-height:1.8}}
+#calendar{background:#0c0c0f}
+#inspiration{background:#0d0d10}
+@media(max-width:820px){#inspiration .prompt-art{height:auto;aspect-ratio:1672/941;object-fit:contain}.prompt-visual:after{background:linear-gradient(180deg,#09090c00 0px,#09090c0d 80px,#09090c88 150px,#09090cf5 225px,#09090c 280px)}.prompt-copy{padding-top:170px}}
+@media(min-width:521px) and (max-width:820px){.prompt-copy{padding-top:32vw}.prompt-visual:after{background:linear-gradient(180deg,#09090c00,#09090c33 25vw,#09090cdd 40vw,#09090c 52vw)}}
