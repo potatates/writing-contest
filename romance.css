@@ -126,3 +126,6 @@ body{background:#100b0c}.hero{padding:0 0 36px;min-height:0;background:#100b0c}.
 #prizes .pc .tag,#prizes .track-label{background:#33151c;border-color:#82434b;color:#eed2c4}
 #prizes .short-track:before{background:linear-gradient(90deg,transparent,#82434b,transparent)}
 #prizes .long-bonus-section,#prizes .pc ul{border-color:#64343c}
+
+/* Keep the full cinematic inspiration frames visible. */
+.prompt-art{aspect-ratio:1672/941;min-height:0}
