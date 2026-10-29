@@ -15,25 +15,25 @@ img{max-width:100%}
 /* Layout: alternating light and purple bands. Purple for hero, prizes and the closing call;
    white cards with soft shadows on light bands. Rounded display sans, one pink highlight colour. */
 :root{
-  --bg:#fff3fb; --surface:#ffffff; --fg:#2a1d4a; --muted:#6f6490; --line:#f0dcf6; --soft:#f1e5ff; --card-border:#e5d1ff; --blob1:rgba(255,140,205,.30); --blob2:rgba(140,100,255,.20);
-  --accent:#6d3df0; --accent-fg:#ffffff; --accent-soft:#efe8ff;
-  --pop:#ff6fae; --pop-soft:#ffe9f4; --pop-fg:#8b1f5a; --pop-line:#ffc4e0; --tag:#d9287a; --on-band-pop:#ffb3da;
-  --band:#5b2fd0; --band-2:#7b4df5; --on-band:#ffffff; --on-band-muted:#e0d4ff;
-  --shadow:0 6px 0 #e3cfff,0 24px 32px -24px rgba(109,61,240,.5);
+  --bg:#fdf5f6; --surface:#ffffff; --fg:#422528; --muted:#886c6e; --line:#f1e1e2; --soft:#faeaeb; --card-border:#f7d9dc; --blob1:rgba(255,140,205,.30); --blob2:rgba(140,100,255,.20);
+  --accent:#d15c67; --accent-fg:#ffffff; --accent-soft:#fbeced;
+  --pop:#e68891; --pop-soft:#fbedee; --pop-fg:#783238; --pop-line:#f5ced2; --tag:#ba4751; --on-band-pop:#f2c0c5;
+  --band:#b44b55; --band-2:#d86a74; --on-band:#ffffff; --on-band-muted:#f7dcde;
+  --shadow:0 6px 0 #f7d7da,0 24px 32px -24px rgba(109,61,240,.5);
   --serif:'Fraunces',Georgia,'Times New Roman',serif;
   --display:'Gabarito','Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;
   --body:'Figtree',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#1a0e42; --surface:#2a1a62; --fg:#f7f2ff; --muted:#bdb0e6; --line:rgba(255,255,255,.12);
-  --accent:#c9afff; --accent-fg:#1d0c4d; --accent-soft:#3a2680;
-  --pop-soft:#4d2068; --pop-fg:#ffc2e3; --pop-line:#8a2f78;
-  --band:#4a22c8; --band-2:#7d3ff5; --soft:#241260; --card-border:rgba(255,255,255,.1); --blob1:rgba(255,90,190,.12); --blob2:rgba(120,80,255,.22); --shadow:0 16px 36px -18px rgba(255,90,190,.28); color-scheme:dark}}
+  --bg:#39171a; --surface:#55272b; --fg:#fdf4f5; --muted:#ddb9bd; --line:rgba(255,255,255,.12);
+  --accent:#f1bdc2; --accent-fg:#42171b; --accent-soft:#70363b;
+  --pop-soft:#5b2d31; --pop-fg:#f4cdd0; --pop-line:#7a3f44;
+  --band:#ab3f49; --band-2:#d55f69; --soft:#522024; --card-border:rgba(255,255,255,.1); --blob1:rgba(255,90,190,.12); --blob2:rgba(120,80,255,.22); --shadow:0 16px 36px -18px rgba(255,90,190,.28); color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#1a0e42; --surface:#2a1a62; --fg:#f7f2ff; --muted:#bdb0e6; --line:rgba(255,255,255,.12);
-  --accent:#c9afff; --accent-fg:#1d0c4d; --accent-soft:#3a2680;
-  --pop-soft:#4d2068; --pop-fg:#ffc2e3; --pop-line:#8a2f78;
-  --band:#4a22c8; --band-2:#7d3ff5; --soft:#241260; --card-border:rgba(255,255,255,.1); --blob1:rgba(255,90,190,.12); --blob2:rgba(120,80,255,.22); --shadow:0 16px 36px -18px rgba(255,90,190,.28); color-scheme:dark}
+  --bg:#39171a; --surface:#55272b; --fg:#fdf4f5; --muted:#ddb9bd; --line:rgba(255,255,255,.12);
+  --accent:#f1bdc2; --accent-fg:#42171b; --accent-soft:#70363b;
+  --pop-soft:#5b2d31; --pop-fg:#f4cdd0; --pop-line:#7a3f44;
+  --band:#ab3f49; --band-2:#d55f69; --soft:#522024; --card-border:rgba(255,255,255,.1); --blob1:rgba(255,90,190,.12); --blob2:rgba(120,80,255,.22); --shadow:0 16px 36px -18px rgba(255,90,190,.28); color-scheme:dark}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:72px;background:var(--bg)}
@@ -79,7 +79,7 @@ section.soft{background:var(--soft);margin-top:70px;padding:112px 0 116px;positi
 .btn{display:inline-flex;align-items:center;gap:8px;font:700 15.5px var(--body);text-decoration:none;white-space:nowrap;border:1px solid var(--accent);background:var(--accent);color:var(--accent-fg);padding:13px 24px;border-radius:99px;cursor:pointer;transition:transform .15s,filter .15s}
 .btn:hover{filter:brightness(1.07);transform:translateY(-1px)}
 .btn.sm{padding:8px 18px;font-size:14px}
-.btn.pop{background:var(--pop);border-color:var(--pop);color:#3b0a33;box-shadow:0 4px 0 #c2418a}
+.btn.pop{background:var(--pop);border-color:var(--pop);color:#321315;box-shadow:0 4px 0 #ab585f}
 .btn.pop:hover{transform:translateY(-2px)}
 .btn.line{background:transparent;color:var(--on-band);border-color:rgba(255,255,255,.55)}
 .btn.line:hover{background:rgba(255,255,255,.12)}
@@ -134,7 +134,7 @@ section.band{padding:110px 0 120px;margin-top:76px}
 .move p{margin:0;color:var(--muted);font-size:16px}
 .notice{margin-top:36px;display:flex;gap:14px;border:1.5px solid var(--pop);background:var(--pop-soft);color:var(--pop-fg);border-radius:16px;padding:16px 20px;font-size:15px;line-height:1.55}
 .notice b{font-weight:700}
-.notice .ic{flex:none;width:22px;height:22px;border-radius:50%;background:var(--pop);color:#3b0a33;display:grid;place-items:center;font-weight:800;font-size:13px;margin-top:2px}
+.notice .ic{flex:none;width:22px;height:22px;border-radius:50%;background:var(--pop);color:#321315;display:grid;place-items:center;font-weight:800;font-size:13px;margin-top:2px}
 @media(max-width:820px){.about{grid-template-columns:1fr;gap:30px}}
 
 /* calendar */
@@ -193,7 +193,7 @@ td.cash small{font:400 14px var(--body);color:var(--muted)}
 /* rules */
 .rules{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .rules li{border:2px solid var(--card-border);transition:transform .2s;background:var(--surface);border-radius:22px;padding:24px 26px;box-shadow:var(--shadow);display:grid;grid-template-columns:38px minmax(0,1fr);gap:0 6px}
-.rules .n{width:32px;height:32px;border-radius:50%;background:var(--pop);color:#3b0a33;rotate:-8deg;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:16px}
+.rules .n{width:32px;height:32px;border-radius:50%;background:var(--pop);color:#321315;rotate:-8deg;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:16px}
 .rules h3{font-family:var(--body);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin:6px 0 8px;color:var(--accent)}
 .rules p{margin:0 0 8px;color:var(--muted);font-size:16px}
 .rules p b{color:var(--fg);font-weight:700}
@@ -236,7 +236,7 @@ td.cash small{font:400 14px var(--body);color:var(--muted)}
 .partner h3{font-size:25px;margin-bottom:6px;font-weight:700}
 .partner p{margin:0;color:var(--muted)}
 .logos{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:26px}
-.logo{display:grid;place-items:center;height:92px;padding:14px 22px;border-radius:18px;background:#5b2fd0}
+.logo{display:grid;place-items:center;height:92px;padding:14px 22px;border-radius:18px;background:#b44b55}
 .logo.light{background:#fff;border:2px solid var(--card-border)}
 .logo img{display:block;width:auto;height:auto;max-height:60px;max-width:100%}
 @media(max-width:680px){.partner{padding:22px}.logos{grid-template-columns:1fr}.logo{height:80px}}
@@ -254,7 +254,7 @@ footer .wrap{display:flex;gap:8px 24px;justify-content:space-between;flex-wrap:w
 <header class="nav">
   <div class="wrap">
     <div class="navpill">
-      <a class="brand" href="#top"><span class="mk"><svg viewBox="0 0 44 48" aria-hidden="true"><defs><linearGradient id="navGem" x2="1" y2="1"><stop stop-color="#f7e8ff"/><stop offset=".3" stop-color="#bc90e2"/><stop offset=".6" stop-color="#603780"/><stop offset="1" stop-color="#d4b2ef"/></linearGradient></defs><path d="M22 2 39 22 22 46 5 22Z" fill="url(#navGem)" stroke="#ead6ef" stroke-width="1.2"/><path d="m22 2-6 20 6 24 6-24Zm-17 20h34M16 22l6-9 6 9" fill="none" stroke="#f0dcff" stroke-width=".8" opacity=".8"/><path d="m22 0 2 5-2 3-2-3ZM0 22l5-2 3 2-3 2Zm44 0-5-2-3 2 3 2Z" fill="#e8cee9"/></svg></span><span class="brand-copy"><span class="brand-eyebrow">InkPort writing contest</span><span class="brand-title">Thanks for Not Choosing Me</span></span></a>
+      <a class="brand" href="#top"><span class="mk"><svg viewBox="0 0 44 48" aria-hidden="true"><defs><linearGradient id="navGem" x2="1" y2="1"><stop stop-color="#fbeced"/><stop offset=".3" stop-color="#d49ea3"/><stop offset=".6" stop-color="#734448"/><stop offset="1" stop-color="#e4bdc0"/></linearGradient></defs><path d="M22 2 39 22 22 46 5 22Z" fill="url(#navGem)" stroke="#ebdadc" stroke-width="1.2"/><path d="m22 2-6 20 6 24 6-24Zm-17 20h34M16 22l6-9 6 9" fill="none" stroke="#f9e2e4" stroke-width=".8" opacity=".8"/><path d="m22 0 2 5-2 3-2-3ZM0 22l5-2 3 2-3 2Zm44 0-5-2-3 2 3 2Z" fill="#e4d3d4"/></svg></span><span class="brand-copy"><span class="brand-eyebrow">InkPort writing contest</span><span class="brand-title">Thanks for Not Choosing Me</span></span></a>
       <nav aria-label="Sections">
         <a href="#about">About</a><a href="#calendar">Calendar</a><a href="#prizes">Prizes</a><a href="#rules">Rules</a><a href="#inspiration">Inspiration</a>
       </nav>
@@ -264,15 +264,15 @@ footer .wrap{display:flex;gap:8px 24px;justify-content:space-between;flex-wrap:w
 </header>
 
 <main id="top">
-  <div class="hero band curve-b"><img class="hero-art" src="assets/hero.webp" alt="A heroine begins a new love beneath the moon in a lavender garden" fetchpriority="high">
+  <div class="hero band curve-b"><img class="hero-art" src="assets/banner.png" alt="Thanks for Not Choosing Me — a defiant heroine in black, surrounded by red roses and shattered glass" fetchpriority="high">
     
     
     
     
     <div class="wrap">
       <div>
-        <div class="kicker">A second chance at love. A new beginning.</div>
-        <p class="hero-overline">INKPORT · ROCNOVEL · SUPERSTORY</p><h1 class="enchanted-title"><span class="title-pre">Thanks for</span><span class="title-main">Not choosing</span><span class="title-finale">me!</span></h1><img class="title-ornament" src="assets/ornament.svg" alt="" aria-hidden="true"><div class="hero-award"><span>Win up to</span><strong>$12,000</strong></div>
+        <div class="kicker">THE WRITING CONTEST · BETRAYAL. AWAKENING. SECOND CHANCES.</div>
+        <p class="hero-overline">INKPORT · ROCNOVEL · SUPERSTORY</p><h1 class="sr-only">Thanks for Not Choosing Me</h1><div class="hero-award"><span>Win up to</span><strong>$12,000</strong></div>
         <p class="strap">He chose someone else. She became the best version of herself and found someone better.</p>
         <div class="cta">
           <a class="btn pop" href="https://author.inkport.top/" target="_blank" rel="noopener">Submit your story</a>
