@@ -284,3 +284,7 @@ body{background:#190609}
 #inspiration .prompt .pn{color:#ffc0cb}
 #inspiration .prompt .pt{color:#f6b7c5}
 @media(max-width:520px){#inspiration .prompt-copy{margin-top:-7%;padding-bottom:28px}}
+
+/* Match summary labels to the editorial serif typography. */
+.glance dt{font-family:var(--serif);font-weight:400;font-size:16px;line-height:1.3;letter-spacing:.01em}
+@media(max-width:520px){.glance dt{font-size:14px}}
