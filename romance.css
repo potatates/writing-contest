@@ -112,3 +112,16 @@ body{background:#100b0c}.hero{padding:0 0 36px;min-height:0;background:#100b0c}.
 #prizes .bronze-prize .amt{background-image:linear-gradient(#ffe1cb,#c38a61 40%,#f5c8a0 48%,#8e573b 53%,#dc9e73 78%);-webkit-text-stroke:.3px #ebbc96}
 #prizes .bronze-prize h4{color:#dfa77e}
 #prizes img{filter:none}#prizes .pc:before,#prizes .head:after{filter:none}
+/* Neutral award containers; original trophy artwork and metallic award colors stay intact. */
+#prizes{background:radial-gradient(ellipse at top,#351017,transparent 65%),#100b0c}
+#prizes .award-track{background:#160e10;border-color:#633039}
+#prizes .pc,#prizes .pc.top,#prizes .pc.top.short-first,#prizes .special-award,#prizes .coffee-reward,#prizes .minor>div,#prizes .scroll{background:linear-gradient(145deg,#261317,#100b0c);box-shadow:inset 0 0 0 3px #160d0f,0 8px 26px #0005}
+#prizes .pc,#prizes .pc.top,#prizes .special-award,#prizes .minor>div,#prizes .scroll{border-color:#78404a}
+#prizes .gold-prize,#prizes .pc.top.short-first{border-color:#d5b777}
+#prizes .silver-prize{border-color:#bcc3d7}
+#prizes .bronze-prize{border-color:#bd8b6a}
+#prizes .coffee-reward{border-color:#96785f}
+#prizes .pc:after{background:#160e10;color:#e5c8b1}
+#prizes .pc .tag,#prizes .track-label{background:#33151c;border-color:#82434b;color:#eed2c4}
+#prizes .short-track:before{background:linear-gradient(90deg,transparent,#82434b,transparent)}
+#prizes .long-bonus-section,#prizes .pc ul{border-color:#64343c}
