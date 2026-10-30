@@ -293,6 +293,24 @@ body,button,input,select,textarea{font-family:var(--body)}
 .hero-award>span,.pc .amt small,#prizes .pc .amt small,#prizes .track-label,#prizes .pc .tag,#prizes .special-award p,#prizes .coffee-reward p,.brand small{font-family:var(--body)!important}
 #calendar .when li span{letter-spacing:.01em}
 #calendar .when li b{font-variant-numeric:lining-nums}
+</style><style>
+/* A concise visual contest brief: premise, turning point, possible futures. */
+#about .head{margin-bottom:20px}
+#about .head h2{font-size:clamp(30px,3.5vw,42px)}
+#about .head:after{display:none}
+#about .theme-premise{max-width:680px;margin:0 auto 38px;text-align:center;font:400 clamp(21px,2.4vw,27px)/1.5 Georgia,serif;color:#eee0d2}
+#about .theme-premise em{color:#f3d598;font-style:italic}
+#about .story-journey{display:grid;grid-template-columns:1fr 64px 1.65fr;align-items:center;max-width:1000px;margin:auto;border-top:1px solid #705548;border-bottom:1px solid #705548;padding:34px 0;gap:24px}
+#about .journey-label{display:block;font:400 15px/1.4 Georgia,serif;color:#d9bca6;margin-bottom:12px;letter-spacing:.06em}
+#about .story-journey h3{font:400 clamp(26px,3vw,37px)/1.2 Georgia,serif;margin:0 0 16px;color:#e9c8ca}
+#about .story-journey p{font:400 18px/1.6 Georgia,serif;color:#dfd6d2;margin:0}
+#about .journey-arrow{font:400 44px/1 Georgia,serif;color:#bd9265;text-align:center}
+#about .journey-after{padding:25px 30px;background:linear-gradient(120deg,#28171a,#0c090a);border-left:2px solid #d7ac73}
+#about .journey-after h3{color:#f6dca9}
+#about .story-paths{display:grid;grid-template-columns:1fr 1fr;gap:14px 20px;list-style:none;padding:0;margin:24px 0 0}
+#about .story-paths li{font:400 18px/1.4 Georgia,serif;color:#f2e9df;display:flex;align-items:baseline;gap:9px}
+#about .story-paths li:before{content:'✦';font-size:12px;color:#d7ac73}
+@media(max-width:700px){#about .theme-premise{margin-bottom:26px}#about .story-journey{grid-template-columns:1fr;gap:18px;padding:25px 0}#about .journey-before{text-align:center}#about .journey-arrow{transform:rotate(90deg);font-size:32px}#about .journey-after{padding:24px 20px}#about .story-paths{gap:15px 12px}#about .story-paths li{font-size:17px}}
 </style></head>
 <body>
 
@@ -340,14 +358,24 @@ body,button,input,select,textarea{font-family:var(--body)}
     </div>
   </div>
 
-  <section id="about">
+  <section id="about" aria-labelledby="about-title">
     <div class="wrap">
-      <div class="head"><h2>About the contest</h2></div>
-      <div class="about about-prose">
-        <p>He promised you forever, then chose his first love. He called you his destined mate, then rejected you before the entire pack. You thought losing him would be the end of your story.</p>
-        <p><b>What if it was the beginning of a life you never imagined?</b></p>
-        <p><b>Thanks for Not Choosing Me</b> celebrates heroines who refuse to let rejection define their worth—whether from a lover, a parent, a friend, a child, or an entire family. Write about the love, friendships, family, or ambitions she chooses next.</p>
-        <p>Not being chosen is only the beginning. What she chooses next is the story.</p>
+      <div class="head"><h2 id="about-title">About the contest</h2></div>
+      <p class="theme-premise">Write a heroine who turns rejection into <em>her own new beginning.</em></p>
+      <div class="story-journey">
+        <div class="journey-before">
+          <span class="journey-label">The turning point</span>
+          <h3>Not chosen.</h3>
+          <p>By a lover, a friend, a parent,<br>a child, or an entire family.</p>
+        </div>
+        <span class="journey-arrow" aria-hidden="true">⟶</span>
+        <div class="journey-after">
+          <span class="journey-label">The story you tell</span>
+          <h3>She chooses what’s next.</h3>
+          <ul class="story-paths" aria-label="Possible story directions">
+            <li>A better love</li><li>True belonging</li><li>Reclaimed ambitions</li><li>A life of her own</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
