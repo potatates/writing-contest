@@ -285,6 +285,14 @@ body{font-size:18px}
 #about .about-prose{display:block;max-width:780px}
 #about .about-prose p{font-family:var(--body);font-size:18px;line-height:1.7;margin:0 0 18px;color:#eee}
 #about .about-prose p:last-child{margin-bottom:0}
+</style><style>
+/* Bookish serif typography, with existing readable sizes retained. */
+:root{--body:Georgia,'Times New Roman',serif;--display:Georgia,'Times New Roman',serif}
+body,button,input,select,textarea{font-family:var(--body)}
+#calendar .when li span,#calendar .when li b,#calendar .track .len,#calendar .track .note,.glance dt{font-family:var(--body)}
+.hero-award>span,.pc .amt small,#prizes .pc .amt small,#prizes .track-label,#prizes .pc .tag,#prizes .special-award p,#prizes .coffee-reward p,.brand small{font-family:var(--body)!important}
+#calendar .when li span{letter-spacing:.01em}
+#calendar .when li b{font-variant-numeric:lining-nums}
 </style></head>
 <body>
 
