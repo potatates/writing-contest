@@ -408,6 +408,47 @@ body,button,input,select,textarea{font-family:var(--body)}
 </style><style>
 #prizes .pz>.pc,#prizes .pz>.pc.top,#prizes .pz>.pc.top.short-first{grid-column:auto;grid-row:auto;width:auto;min-width:0}
 @media(min-width:761px){#prizes .pc .award-copy{display:contents}#prizes .pc .tag{position:absolute;top:12px;left:50%;transform:translateX(-50%);white-space:nowrap}#prizes .pc .prize-trophy,#prizes .pc.top .prize-trophy,#prizes .pc.top.short-first .prize-trophy{margin-top:26px}}
+</style><style>
+/* One continuous prize illustration, with the highest award at its center. */
+#prizes .prize-podium{position:relative;isolation:isolate;display:grid;grid-template-columns:1fr 1.35fr 1fr;gap:14px;align-items:start;padding:30px 22px 26px;border:1px solid #9e80af;border-radius:16px;background:radial-gradient(ellipse at 50% 38%,#9364ac55,transparent 60%),linear-gradient(120deg,#20152d,#3c254e 50%,#20152d);box-shadow:inset 0 0 0 5px #26182e,inset 0 0 0 6px #b58dc52b;overflow:hidden}
+#prizes .prize-podium:before{content:'';position:absolute;inset:16px;z-index:-1;background:url('../assets/ornament.svg') center 8px / 230px auto no-repeat;opacity:.5;pointer-events:none}
+#prizes .podium-award{min-width:0;text-align:center;border:0;background:none;box-shadow:none;padding-top:74px}
+#prizes .podium-main{grid-column:2;grid-row:1;padding-top:0}
+#prizes .podium-second{grid-column:1;grid-row:1}
+#prizes .podium-third{grid-column:3;grid-row:1}
+#prizes .podium-award h4{font:400 clamp(21px,2.2vw,29px)/1.2 Georgia,serif;color:#f0dbf9;margin:0 0 10px}
+#prizes .podium-main h4{font-size:clamp(29px,3.1vw,41px);color:#ffeac0;text-shadow:0 0 18px #c899ef66}
+#prizes .podium-award img{display:block;width:100%;height:170px;object-fit:contain;margin:0 auto 10px;filter:drop-shadow(0 8px 12px #0008)}
+#prizes .podium-main img{height:245px;filter:drop-shadow(0 0 24px #e7c1ff66) drop-shadow(0 10px 12px #0008)}
+#prizes .podium-money{font:400 clamp(33px,4vw,52px)/1.12 Georgia,serif;color:#f4e5fc;text-shadow:0 0 10px #c79be17a;white-space:nowrap;letter-spacing:-.04em}
+#prizes .podium-main .podium-money{font-size:clamp(49px,6vw,80px);color:#ffedc7;text-shadow:0 0 20px #dfac6870}
+#prizes .podium-winners{font:400 17px/1.4 Georgia,serif;color:#e7d2ef;margin:9px 0 16px}
+#prizes .podium-perks{font:400 17px/1.5 Georgia,serif;color:#f3e9f7;border-top:1px solid #cba7db66;padding-top:12px}
+#prizes .podium-exclusive{font:400 17px/1.5 Georgia,serif;color:#ead8bf;margin:14px 0 0;text-align:center}
+#prizes .award-extras{background:none;border:0;border-top:1px solid #82658e;border-radius:0;margin-top:28px;padding-top:24px}
+#prizes .extras-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+#prizes .extras-heading h4{font:400 clamp(25px,2.8vw,33px)/1.25 Georgia,serif;color:#f3debc;margin:0}
+#prizes .extras-heading p{font:400 16px/1.5 Georgia,serif;color:#dec7e8;margin:0}
+#prizes .extras-content{padding:0}
+#prizes .coffee-reward{margin-top:14px}
+@media(max-width:600px){
+#prizes .award-track{padding:22px 10px}
+#prizes .prize-podium{gap:8px;padding:24px 8px 20px;grid-template-columns:1fr 1.3fr 1fr}
+#prizes .podium-award{padding-top:48px}
+#prizes .podium-main{padding-top:0}
+#prizes .podium-award h4{font-size:19px;min-height:46px;display:flex;align-items:end;justify-content:center}
+#prizes .podium-main h4{font-size:25px}
+#prizes .podium-award img{height:95px;margin-bottom:8px}
+#prizes .podium-main img{height:143px}
+#prizes .podium-money{font-size:clamp(23px,6.2vw,35px)}
+#prizes .podium-main .podium-money{font-size:clamp(31px,8.6vw,49px)}
+#prizes .podium-winners{font-size:14px;margin:8px 0 12px}
+#prizes .podium-perks{font-size:15px;line-height:1.45;padding-top:10px}
+#prizes .podium-exclusive{font-size:16px}
+#prizes .extras-heading{padding:0 6px}
+}
+</style><style>
+#prizes .podium-main img{width:140%;max-width:none;margin-left:-20%;margin-right:-20%}
 </style></head>
 <body>
 
@@ -426,10 +467,10 @@ body,button,input,select,textarea{font-family:var(--body)}
 
 <main id="top">
   <div class="hero band curve-b"><img class="hero-art" src="../assets/banner.png" alt="Thanks for Not Choosing Me — a defiant heroine in black, surrounded by red roses and shattered glass" fetchpriority="high">
-    
-    
-    
-    
+
+
+
+
     <div class="wrap">
       <div>
         <div class="kicker">THE WRITING CONTEST · BETRAYAL. AWAKENING. SECOND CHANCES.</div>
@@ -510,14 +551,10 @@ body,button,input,select,textarea{font-family:var(--body)}
 <button type="button" role="tab" id="tab-short" aria-controls="awards-short" aria-selected="false" tabindex="-1">Short stories <span>14 awards</span></button>
 </div>
 <div class="award-track long-track" id="awards-long" aria-labelledby="long-awards-title"><div class="sub"><h3 id="long-awards-title">Long novel awards</h3><span class="cnt">52 awards</span></div>
-      <div class="pz">
-        <article class="pc top"><img class="prize-trophy" src="../assets/prize-trophy.webp" alt="Silver crown and trophy with amethyst gemstones" width="1536" height="1024" loading="lazy"><div class="award-copy"><span class="tag">INKPORT EXCLUSIVE</span><div class="rk">1 winner</div><h4>Grand prize</h4><div class="amt">$12,000</div><ul><li>6 promotions</li><li>Priority IP adaptation review</li></ul></div></article>
-        <article class="pc gold-prize"><img class="prize-trophy" src="../assets/gold-trophy.webp" alt="Polished gold trophy cup" width="1536" height="1024" loading="lazy"><div class="rk">2 winners</div><h4>Gold</h4><div class="amt">$7,000<small>each</small></div><ul><li>4 promotions</li></ul></article>
-        <article class="pc silver-prize"><img class="prize-trophy" src="../assets/silver-trophy.webp" alt="Polished silver trophy cup" width="1536" height="1024" loading="lazy"><div class="rk">2 winners</div><h4>Silver</h4><div class="amt">$2,500<small>each</small></div><ul><li>2 promotions</li></ul></article>
-      </div>
+<div class="prize-podium" aria-label="Main prizes"><article class="podium-award podium-main"><h4>Grand prize</h4><img src="../assets/prize-trophy.webp" alt="Amethyst crown and trophy" width="1536" height="1024" loading="lazy"><div class="podium-money">$12,000</div><p class="podium-winners">1 winner</p><div class="podium-perks">6 promotions</div></article><article class="podium-award podium-second"><h4>Gold</h4><img src="../assets/gold-trophy.webp" alt="Gold trophy" width="1536" height="1024" loading="lazy"><div class="podium-money">$7,000</div><p class="podium-winners">each · 2 winners</p><div class="podium-perks">4 promotions each</div></article><article class="podium-award podium-third"><h4>Silver</h4><img src="../assets/silver-trophy.webp" alt="Silver trophy" width="1536" height="1024" loading="lazy"><div class="podium-money">$2,500</div><p class="podium-winners">each · 2 winners</p><div class="podium-perks">2 promotions each</div></article></div><p class="podium-exclusive">Grand prize: InkPort exclusive · Priority IP adaptation review.</p>
       <p class="subnote"><b>Grand Prize:</b> InkPort exclusive contract and 200,000+ words by the submission deadline, Mar 31, 2027. <b>Other long-novel prizes:</b> 150,000+ words by the same deadline.</p>
-      <details class="award-extras long-bonus-section" id="long-special-awards"><summary><span>Special awards &amp; monthly bonuses</span><small>47 awards · $60–$600 each</small></summary><div class="extras-content">
-        <div class="bonus-head"><span class="track-label">Long novel track only</span><h4>Special awards</h4><p>Additional awards for outstanding long-novel entries.</p></div>
+      <div class="award-extras long-bonus-section" id="long-special-awards"><div class="extras-heading"><h4>Special awards &amp; monthly bonuses</h4><p>47 awards · $60–$600 each</p></div><div class="extras-content">
+
         <div class="special-awards">
           <article class="special-award"><img src="../assets/opening-award.webp" alt="Crystal quill and open book" loading="lazy" width="1536" height="1024"><span class="award-places">2 winners</span><h5>Most Addictive Opening</h5><div class="award-cash">$400 <small>each</small></div></article>
           <article class="special-award"><img src="../assets/female-lead-award.webp" alt="Silver tiara with amethyst gemstones" loading="lazy" width="1536" height="1024"><span class="award-places">2 winners</span><h5>Best Female Lead</h5><div class="award-cash">$400 <small>each</small></div></article>
@@ -525,18 +562,14 @@ body,button,input,select,textarea{font-family:var(--body)}
           <article class="special-award"><img src="../assets/readers-award.webp" alt="Crystal book and rose-quartz heart" loading="lazy" width="1536" height="1024"><span class="award-places">1 winner</span><h5>Reader’s Choice</h5><div class="award-cash">$600</div><p>+ 2 promotions</p></article>
         </div>
         <article class="coffee-reward" id="long-monthly-reward"><img src="../assets/coffee-award.webp" alt="Decorative coffee cup with heart latte art" loading="lazy" width="1536" height="1024"><div><span class="track-label">Long novel · Monthly reward</span><h4>Coffee Bonus</h4><div class="award-cash">$60 <small>each</small></div><p><b>40 awards</b> · Monthly Top 10<br>Nov 2026–Feb 2027</p></div></article>
-      </div></details>
+      </div></div>
 
       </div><div class="award-track short-track" id="awards-short" aria-labelledby="short-awards-title"><div class="sub"><h3 id="short-awards-title">Short story awards</h3><span class="cnt">14 awards</span></div>
-      <div class="pz">
-        <article class="pc top short-first gold-prize"><img class="prize-trophy" src="../assets/gold-trophy.webp" alt="Polished gold trophy cup" width="1536" height="1024" loading="lazy"><div class="award-copy"><span class="tag">INKPORT EXCLUSIVE</span><div class="rk">1 winner</div><h4>First prize</h4><div class="amt">$2,500</div><ul><li>3+ promotions</li></ul></div></article>
-        <article class="pc silver-prize"><img class="prize-trophy" src="../assets/silver-trophy.webp" alt="Polished silver trophy cup" width="1536" height="1024" loading="lazy"><div class="rk">2 winners</div><h4>Second prize</h4><div class="amt">$1,000<small>each</small></div><ul><li>2 promotions each</li></ul></article>
-        <article class="pc bronze-prize"><img class="prize-trophy" src="../assets/bronze-trophy.webp" alt="Polished bronze trophy cup" width="1536" height="1024" loading="lazy"><div class="rk">3 winners</div><h4>Third prize</h4><div class="amt">$700<small>each</small></div><ul><li>1 promotion each</li></ul></article>
-      </div>
-      <details class="award-extras"><summary><span>More ways to win</span><small>8 awards · $150–$200 each</small></summary><div class="extras-content">      <div class="minor">
+<div class="prize-podium" aria-label="Main prizes"><article class="podium-award podium-main"><h4>First prize</h4><img src="../assets/gold-trophy.webp" alt="Gold trophy" width="1536" height="1024" loading="lazy"><div class="podium-money">$2,500</div><p class="podium-winners">1 winner</p><div class="podium-perks">3+ promotions</div></article><article class="podium-award podium-second"><h4>Second prize</h4><img src="../assets/silver-trophy.webp" alt="Silver trophy" width="1536" height="1024" loading="lazy"><div class="podium-money">$1,000</div><p class="podium-winners">each · 2 winners</p><div class="podium-perks">2 promotions each</div></article><article class="podium-award podium-third"><h4>Third prize</h4><img src="../assets/bronze-trophy.webp" alt="Bronze trophy" width="1536" height="1024" loading="lazy"><div class="podium-money">$700</div><p class="podium-winners">each · 3 winners</p><div class="podium-perks">1 promotion each</div></article></div><p class="podium-exclusive">First prize: InkPort exclusive.</p>
+      <div class="award-extras"><div class="extras-heading"><h4>More ways to win</h4><p>8 awards · $150–$200 each</p></div><div class="extras-content">      <div class="minor">
         <div><img class="minor-award-art" src="../assets/opening-award.webp" alt="Crystal quill" loading="lazy"><b>$150</b><span><strong>Best Opening</strong>6 awards, 2 winners per round, 3 rounds of 2 months: Mar 31–May 30, May 31–Jul 30 and Jul 31–Sep 29, 2027</span></div>
         <div><img class="minor-award-art" src="../assets/readers-award.webp" alt="Crystal book with a heart" loading="lazy"><b>$200</b><span><strong>Reader's Pick</strong>2 awards, based on reader engagement</span></div>
-      </div></div></details>
+      </div></div></div>
       </div>
     </div>
   </section>
