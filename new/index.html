@@ -349,6 +349,65 @@ body,button,input,select,textarea{font-family:var(--body)}
   #calendar .track{display:grid;grid-template-rows:subgrid;grid-row:span 2}
 }
 @media(max-width:480px){#calendar .track .th,#calendar .track.long .th{padding:18px}}
+</style><style>
+/* Track selector and compact prize presentation. */
+#prizes .award-tabs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:26px 0 0}
+#prizes .award-tabs button{font:400 clamp(22px,2.8vw,30px)/1.2 Georgia,serif;color:#d8c6df;background:#100d14;border:1px solid #6f587d;border-radius:10px 10px 0 0;padding:18px 20px;cursor:pointer;text-align:left}
+#prizes .award-tabs button span{display:block;font-size:16px;margin-top:8px;color:#d7c3e1}
+#prizes .award-tabs button[aria-selected=true]{background:#36233f;border-color:#dfb9ee;box-shadow:inset 0 -4px #dfb9ee;color:#fff1d9}
+#prizes .award-track{margin:0;padding:26px 24px;border-radius:0 0 16px 16px;border-color:#8e709a;background:#130e19}
+#prizes .short-track:before{display:none}
+#prizes .award-track>.sub{margin:0 0 26px;justify-content:space-between;text-align:left;gap:12px}
+#prizes .award-track>.sub h3{font:400 clamp(32px,4.2vw,48px)/1.15 Georgia,serif;color:#f8e3b3}
+#prizes .award-track>.sub .cnt{font:400 16px/1.4 Georgia,serif;padding:6px 12px;color:#eeddf5}
+#prizes .pz{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:stretch}
+#prizes .pc,#prizes .pc.top,#prizes .pc.top.short-first{display:flex;flex-direction:column;align-items:center;padding:20px 16px;text-align:center;gap:0}
+#prizes .pc:before,#prizes .pc:after{display:none}
+#prizes .pc .prize-trophy,#prizes .pc.top .prize-trophy,#prizes .pc.top.short-first .prize-trophy{width:130px;height:100px;max-width:100%;margin:0 auto 8px}
+#prizes .pc h4,#prizes .pc.top h4,#prizes .pc:not(.top) h4{font-size:25px;margin:8px 0 12px}
+#prizes .pc .amt,#prizes .pc.top .amt,#prizes .pc:not(.top) .amt{font-size:clamp(36px,4.3vw,54px);line-height:1.1}
+#prizes .pc .rk,#prizes .pc.top .rk{font-size:15px;margin:0}
+#prizes .pc .tag{margin:0 0 8px;padding:4px 8px;font-size:12px;letter-spacing:.03em}
+#prizes .pc ul{padding-top:12px;margin-top:14px}
+#prizes .pc .amt small{font-size:16px}
+#prizes .award-extras{margin:22px 0 0;padding:0;border:1px solid #866692;border-radius:8px;background:#1b1223}
+#prizes .award-extras>summary{display:grid;grid-template-columns:1fr 24px;gap:6px 14px;padding:18px 20px;list-style:none;cursor:pointer;color:#f5e5ce;font:400 23px/1.3 Georgia,serif}
+#prizes .award-extras>summary::-webkit-details-marker{display:none}
+#prizes .award-extras>summary small{grid-column:1;font:400 16px/1.5 Georgia,serif;color:#decae7}
+#prizes .award-extras>summary:after{content:'+';grid-column:2;grid-row:1;font-size:28px}
+#prizes .award-extras[open]>summary:after{content:'−'}
+#prizes .extras-content{padding:0 20px 20px}
+#prizes .special-awards{gap:12px}
+#prizes .special-award{display:grid;grid-template-columns:70px 1fr;gap:4px 14px;text-align:left;padding:16px}
+#prizes .special-award>img{grid-column:1;grid-row:1 / span 4;width:70px;height:85px;margin:0}
+#prizes .special-award> :not(img){grid-column:2}
+#prizes .special-award h5{font-size:21px;margin:4px 0}
+#prizes .special-award .award-cash{font-size:30px}
+#prizes .award-places{font:400 15px/1.4 Georgia,serif}
+#prizes .coffee-reward{padding:16px;gap:18px;margin-top:14px}
+#prizes .coffee-reward>img{width:90px;height:85px}
+#prizes .coffee-reward h4{font-size:24px;margin:6px 0}
+#prizes .coffee-reward .award-cash{font-size:32px}
+@media(max-width:760px){
+#prizes .award-track{padding:22px 16px}
+#prizes .pz{grid-template-columns:1fr;gap:12px}
+#prizes .pc,#prizes .pc.top,#prizes .pc.top.short-first{display:grid;grid-template-columns:85px minmax(0,1fr);column-gap:18px;align-items:center;text-align:left;padding:18px}
+#prizes .pc>.prize-trophy,#prizes .pc.top>.prize-trophy,#prizes .pc.top.short-first>.prize-trophy{grid-column:1;grid-row:1 / span 5;width:85px;height:110px;margin:0}
+#prizes .pc>:not(img){grid-column:2}
+#prizes .pc .amt,#prizes .pc.top .amt,#prizes .pc:not(.top) .amt{font-size:38px}
+#prizes .pc .amt small{display:inline;margin-left:7px}
+#prizes .pc ul{margin-top:9px;padding-top:8px;width:100%}
+#prizes .pc h4,#prizes .pc.top h4,#prizes .pc:not(.top) h4{font-size:24px;margin:4px 0 9px}
+#prizes .award-tabs button{padding:16px 12px}
+#prizes .special-awards,#prizes .minor{grid-template-columns:1fr}
+#prizes .coffee-reward{flex-direction:row;text-align:left}
+#prizes .extras-content{padding:0 12px 16px}
+}
+</style><style>
+@media(max-width:760px){#prizes .pc .award-copy,#prizes .pc ul,#prizes .pc .rk,#prizes .pc .amt,#prizes .pc h4{text-align:left}#prizes .pc .award-copy{width:100%}}
+</style><style>
+#prizes .pz>.pc,#prizes .pz>.pc.top,#prizes .pz>.pc.top.short-first{grid-column:auto;grid-row:auto;width:auto;min-width:0}
+@media(min-width:761px){#prizes .pc .award-copy{display:contents}#prizes .pc .tag{position:absolute;top:12px;left:50%;transform:translateX(-50%);white-space:nowrap}#prizes .pc .prize-trophy,#prizes .pc.top .prize-trophy,#prizes .pc.top.short-first .prize-trophy{margin-top:26px}}
 </style></head>
 <body>
 
@@ -446,14 +505,18 @@ body,button,input,select,textarea{font-family:var(--body)}
       <div class="head"><div class="kicker">Cash prizes &amp; promotional rewards</div><h2>Rewards for every track.</h2><p>Winners may choose which of their own books to promote.</p></div>
       <p class="exnote">The grand prize and first prize are <b>exclusive</b>. All other prizes are open to exclusive and non-exclusive entries. Each author can win only one main prize; all other awards can be won in addition.</p>
 
-      <div class="award-track long-track" aria-labelledby="long-awards-title"><div class="sub"><h3 id="long-awards-title">Long novel awards</h3><span class="cnt">52 awards</span></div>
+      <div class="award-tabs" role="tablist" aria-label="Award tracks" hidden>
+<button type="button" role="tab" id="tab-long" aria-controls="awards-long" aria-selected="true">Long novels <span>52 awards</span></button>
+<button type="button" role="tab" id="tab-short" aria-controls="awards-short" aria-selected="false" tabindex="-1">Short stories <span>14 awards</span></button>
+</div>
+<div class="award-track long-track" id="awards-long" aria-labelledby="long-awards-title"><div class="sub"><h3 id="long-awards-title">Long novel awards</h3><span class="cnt">52 awards</span></div>
       <div class="pz">
         <article class="pc top"><img class="prize-trophy" src="../assets/prize-trophy.webp" alt="Silver crown and trophy with amethyst gemstones" width="1536" height="1024" loading="lazy"><div class="award-copy"><span class="tag">INKPORT EXCLUSIVE</span><div class="rk">1 winner</div><h4>Grand prize</h4><div class="amt">$12,000</div><ul><li>6 promotions</li><li>Priority IP adaptation review</li></ul></div></article>
         <article class="pc gold-prize"><img class="prize-trophy" src="../assets/gold-trophy.webp" alt="Polished gold trophy cup" width="1536" height="1024" loading="lazy"><div class="rk">2 winners</div><h4>Gold</h4><div class="amt">$7,000<small>each</small></div><ul><li>4 promotions</li></ul></article>
         <article class="pc silver-prize"><img class="prize-trophy" src="../assets/silver-trophy.webp" alt="Polished silver trophy cup" width="1536" height="1024" loading="lazy"><div class="rk">2 winners</div><h4>Silver</h4><div class="amt">$2,500<small>each</small></div><ul><li>2 promotions</li></ul></article>
       </div>
       <p class="subnote"><b>Grand Prize:</b> InkPort exclusive contract and 200,000+ words by the submission deadline, Mar 31, 2027. <b>Other long-novel prizes:</b> 150,000+ words by the same deadline.</p>
-      <div class="long-bonus-section" id="long-special-awards">
+      <details class="award-extras long-bonus-section" id="long-special-awards"><summary><span>Special awards &amp; monthly bonuses</span><small>47 awards · $60–$600 each</small></summary><div class="extras-content">
         <div class="bonus-head"><span class="track-label">Long novel track only</span><h4>Special awards</h4><p>Additional awards for outstanding long-novel entries.</p></div>
         <div class="special-awards">
           <article class="special-award"><img src="../assets/opening-award.webp" alt="Crystal quill and open book" loading="lazy" width="1536" height="1024"><span class="award-places">2 winners</span><h5>Most Addictive Opening</h5><div class="award-cash">$400 <small>each</small></div></article>
@@ -462,18 +525,18 @@ body,button,input,select,textarea{font-family:var(--body)}
           <article class="special-award"><img src="../assets/readers-award.webp" alt="Crystal book and rose-quartz heart" loading="lazy" width="1536" height="1024"><span class="award-places">1 winner</span><h5>Reader’s Choice</h5><div class="award-cash">$600</div><p>+ 2 promotions</p></article>
         </div>
         <article class="coffee-reward" id="long-monthly-reward"><img src="../assets/coffee-award.webp" alt="Decorative coffee cup with heart latte art" loading="lazy" width="1536" height="1024"><div><span class="track-label">Long novel · Monthly reward</span><h4>Coffee Bonus</h4><div class="award-cash">$60 <small>each</small></div><p><b>40 awards</b> · Monthly Top 10<br>Nov 2026–Feb 2027</p></div></article>
-      </div>
+      </div></details>
 
-      </div><div class="award-track short-track" aria-labelledby="short-awards-title"><div class="sub"><h3 id="short-awards-title">Short story awards</h3><span class="cnt">14 awards</span></div>
+      </div><div class="award-track short-track" id="awards-short" aria-labelledby="short-awards-title"><div class="sub"><h3 id="short-awards-title">Short story awards</h3><span class="cnt">14 awards</span></div>
       <div class="pz">
         <article class="pc top short-first gold-prize"><img class="prize-trophy" src="../assets/gold-trophy.webp" alt="Polished gold trophy cup" width="1536" height="1024" loading="lazy"><div class="award-copy"><span class="tag">INKPORT EXCLUSIVE</span><div class="rk">1 winner</div><h4>First prize</h4><div class="amt">$2,500</div><ul><li>3+ promotions</li></ul></div></article>
         <article class="pc silver-prize"><img class="prize-trophy" src="../assets/silver-trophy.webp" alt="Polished silver trophy cup" width="1536" height="1024" loading="lazy"><div class="rk">2 winners</div><h4>Second prize</h4><div class="amt">$1,000<small>each</small></div><ul><li>2 promotions each</li></ul></article>
         <article class="pc bronze-prize"><img class="prize-trophy" src="../assets/bronze-trophy.webp" alt="Polished bronze trophy cup" width="1536" height="1024" loading="lazy"><div class="rk">3 winners</div><h4>Third prize</h4><div class="amt">$700<small>each</small></div><ul><li>1 promotion each</li></ul></article>
       </div>
-      <div class="minor">
+      <details class="award-extras"><summary><span>More ways to win</span><small>8 awards · $150–$200 each</small></summary><div class="extras-content">      <div class="minor">
         <div><img class="minor-award-art" src="../assets/opening-award.webp" alt="Crystal quill" loading="lazy"><b>$150</b><span><strong>Best Opening</strong>6 awards, 2 winners per round, 3 rounds of 2 months: Mar 31–May 30, May 31–Jul 30 and Jul 31–Sep 29, 2027</span></div>
         <div><img class="minor-award-art" src="../assets/readers-award.webp" alt="Crystal book with a heart" loading="lazy"><b>$200</b><span><strong>Reader's Pick</strong>2 awards, based on reader engagement</span></div>
-      </div>
+      </div></div></details>
       </div>
     </div>
   </section>
@@ -573,5 +636,15 @@ document.querySelectorAll('section[id]').forEach(s => so.observe(s));
 <script>
 function revealGenre(){const target=document.getElementById(location.hash.slice(1));const genre=target?.closest('details.genre-fold');if(genre){genre.open=true;requestAnimationFrame(()=>target.scrollIntoView({block:'start'}));}}
 window.addEventListener('hashchange',revealGenre);revealGenre();
+</script><script>
+(()=>{
+ const tabs=[...document.querySelectorAll('.award-tabs [role="tab"]')];
+ const panels=tabs.map(t=>document.getElementById(t.getAttribute('aria-controls')));
+ function select(index,focus=false){tabs.forEach((t,i)=>{t.setAttribute('aria-selected',String(i===index));t.tabIndex=i===index?0:-1;panels[i].hidden=i!==index;});if(focus)tabs[index].focus();}
+ tabs.forEach((t,i)=>{panels[i].setAttribute('role','tabpanel');panels[i].setAttribute('aria-labelledby',t.id);t.addEventListener('click',()=>select(i));t.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();select(e.key==='Home'?0:e.key==='End'?tabs.length-1:(i+1)%tabs.length,true);}});});
+ document.querySelector('.award-tabs').hidden=false;select(0);
+ function revealAward(){const el=document.getElementById(location.hash.slice(1));if(!el)return;const panel=el.closest('.award-track');if(panel){select(panels.indexOf(panel));const detail=el.closest('details');if(detail)detail.open=true;requestAnimationFrame(()=>el.scrollIntoView({block:'start'}));}}
+ window.addEventListener('hashchange',revealAward);revealAward();
+})();
 </script></body>
 </html>
