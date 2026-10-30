@@ -341,6 +341,14 @@ body,button,input,select,textarea{font-family:var(--body)}
 #inspiration .genre-content>.gd{font:400 18px/1.6 Georgia,serif;color:#e2d6cf;max-width:780px;margin:0 auto 26px}
 #inspiration .prompt .pt{font-size:16px}
 @media(max-width:480px){#calendar .track .th{padding:18px}#calendar .track .in{padding:0 18px 16px}#calendar .when li{grid-template-columns:1fr auto;gap:8px}#calendar .when li span{font-size:16px}#calendar .when li b{font-size:17px}#calendar .when .deadline b{font-size:20px}#inspiration .genre-fold>summary{padding:20px 16px;gap:8px 12px}#inspiration .genre-content{padding:16px 10px}#inspiration .genre-count{font-size:15px}}
+</style><style>
+/* Match both header paddings; share header/body row heights across tracks. */
+#calendar .track .th,#calendar .track.long .th{padding:20px 24px 14px}
+@media(min-width:761px){
+  #calendar .tracks{grid-template-rows:auto auto;row-gap:0}
+  #calendar .track{display:grid;grid-template-rows:subgrid;grid-row:span 2}
+}
+@media(max-width:480px){#calendar .track .th,#calendar .track.long .th{padding:18px}}
 </style></head>
 <body>
 
