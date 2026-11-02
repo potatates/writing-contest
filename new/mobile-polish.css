@@ -148,3 +148,29 @@ html{scroll-padding-top:calc(var(--nav-height,120px) + 16px)}
 #about .about-copy p:last-child{margin-bottom:0}
 #about .about-copy strong{color:var(--cream,#f3e3cf);font-weight:700}
 @media(max-width:600px){#about .about-copy p{font-size:18px;line-height:1.65}}
+
+/* A clear primary action with a quieter, coordinated prize link. */
+.hero .cta{gap:14px;align-items:stretch}
+.hero .btn,.final .btn{
+  min-height:56px;padding:16px 25px;border-radius:10px;
+  font-family:Georgia,'Times New Roman',serif;font-size:18px;font-weight:700;
+  letter-spacing:.015em;text-transform:none;text-shadow:none;
+  transition:background .18s,box-shadow .18s,transform .18s;
+}
+.hero .btn::before,.hero .btn::after,.final .btn::before,.final .btn::after{content:none}
+.hero .btn.pop,.final .btn.pop{
+  color:#fff3df;border:1px solid #d9b375;
+  background:linear-gradient(135deg,#b62940,#7c1228);
+  box-shadow:inset 0 1px 0 #ffe3b64d,inset 0 0 0 4px #38091633,0 6px 20px #850e2838;
+}
+.hero .btn.line{
+  color:#f0d5a0;border:1px solid #af8d58;
+  background:linear-gradient(135deg,#241b14,#100d0b);
+  box-shadow:inset 0 0 0 4px #cfaa6510;
+}
+.hero .btn.pop:hover,.final .btn.pop:hover{background:linear-gradient(135deg,#c6344d,#961a33);filter:none;transform:translateY(-2px);box-shadow:inset 0 1px 0 #ffe3b64d,0 8px 24px #850e2855}
+.hero .btn.line:hover{background:#302217;filter:none;transform:translateY(-2px)}
+.hero .btn:focus-visible,.final .btn:focus-visible{outline:3px solid #ffe1a1;outline-offset:5px}
+.hero .btn:active,.final .btn:active{transform:translateY(0)}
+@media(max-width:600px){.hero .cta{gap:12px}.hero .btn,.final .btn{font-size:18px;min-width:0;min-height:54px;padding:14px 20px}}
+@media(prefers-reduced-motion:reduce){.hero .btn,.final .btn{transition:none;transform:none}}
