@@ -237,3 +237,11 @@ html{scroll-padding-top:calc(var(--nav-height,120px) + 16px)}
   -webkit-font-smoothing:antialiased;
 }
 @media(max-width:600px){.hero .cta .btn,.final .btn{font-size:22px;letter-spacing:.035em}}
+
+/* Keep uppercase labels comfortably inside a lighter jewelry frame. */
+.hero .cta .btn,.final .btn{border-width:1px;padding:18px 22px;font-size:16px;letter-spacing:.025em;white-space:normal;text-align:center;line-height:1.3;text-wrap:balance}
+.hero .cta .btn.pop,.hero .cta .btn.pop:hover,.final .btn.pop,.final .btn.pop:hover,
+.hero .cta .btn.line,.hero .cta .btn.line:hover{
+  box-shadow:inset 0 1px 1px #fff1c766,inset 0 0 0 3px #1d0d13,inset 0 0 0 4px #ad8a5c,inset 0 -3px 7px #0006,0 2px 0 #674c34,0 6px 14px #0006;
+}
+@media(max-width:600px){.hero .cta .btn,.final .btn{font-size:18px;padding-inline:24px;letter-spacing:.025em}}
