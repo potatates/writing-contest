@@ -312,3 +312,5 @@ html{scroll-padding-top:calc(var(--nav-height,120px) + 16px)}
 .footer-cta{padding-top:70px;padding-bottom:30px}
 .submit-row,.submit-row.final{display:flex;justify-content:center;margin:0 0 54px;padding:0;background:none;border:0;min-height:0}
 .contact-line{margin:34px 0 0;text-align:center;font-size:18px;color:#f1e3e4}
+/* Hero ornaments use the same platinum treatment as the section dividers. */
+.hero .strap:before,.hero .strap:after{filter:sepia(.8) saturate(.8)}
