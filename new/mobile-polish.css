@@ -275,3 +275,14 @@ html{scroll-padding-top:calc(var(--nav-height,120px) + 16px)}
 .navpill nav a:hover:not(.on)::before,.navpill nav a:hover:not(.on)::after{opacity:0}
 .navpill nav a.on,.navpill nav a.on:hover{color:#f3d6a0;text-shadow:0 0 12px #d4a35f33}
 .navpill nav a.on::before,.navpill nav a.on::after{opacity:1}
+
+/* A visible, soft hover highlight distinct from the current-section marker. */
+.navpill nav a{transition:color .18s,background .18s,text-shadow .18s}
+.navpill nav a:hover:not(.on){
+  color:#fff2de;background:radial-gradient(ellipse at center,#852b46aa 0%,#571b3270 48%,transparent 76%);
+  text-shadow:0 0 10px #f1b8a65c;
+}
+.navpill nav a.on:hover{
+  background:radial-gradient(ellipse at center,#852b46aa 0%,#571b3270 48%,transparent 76%);
+}
+@media(prefers-reduced-motion:reduce){.navpill nav a{transition:none}}
