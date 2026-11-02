@@ -245,3 +245,27 @@ html{scroll-padding-top:calc(var(--nav-height,120px) + 16px)}
   box-shadow:inset 0 1px 1px #fff1c766,inset 0 0 0 3px #1d0d13,inset 0 0 0 4px #ad8a5c,inset 0 -3px 7px #0006,0 2px 0 #674c34,0 6px 14px #0006;
 }
 @media(max-width:600px){.hero .cta .btn,.final .btn{font-size:18px;padding-inline:24px;letter-spacing:.025em}}
+
+/* Quiet jewelry for the header, with ornamental navigation markers. */
+.navpill .btn.sm{
+  border:1px solid #c9a577;border-radius:24px;padding:10px 22px;min-height:42px;
+  font-family:Didot,'Bodoni 72',Georgia,serif;font-size:15px;font-weight:400;
+  letter-spacing:.05em;text-transform:uppercase;color:#faead0;
+  background:linear-gradient(165deg,#78283c,#3c1020 65%,#632135);
+  box-shadow:inset 0 0 0 3px #291018,inset 0 0 0 4px #9e795566,0 3px 9px #0005;
+}
+.navpill .btn.sm::before{content:'';display:block;position:absolute;left:50%;right:auto;top:-11px;transform:translateX(-50%);width:52px;height:21px;background:url('button-jewel.svg') center/contain no-repeat;pointer-events:none;filter:drop-shadow(0 1px 1px #0009)}
+.navpill .btn.sm::after{display:none}
+.navpill .btn.sm:hover{filter:brightness(1.12);transform:none}
+.navpill nav a,.navpill nav a:hover,.navpill nav a.on{
+  position:relative;border-color:transparent;border-radius:0;background:transparent;box-shadow:none;
+}
+.navpill nav a{transition:color .18s,text-shadow .18s}
+.navpill nav a:hover,.navpill nav a.on{color:#f3d6a0;text-shadow:0 0 12px #d4a35f33}
+.navpill nav a::after{content:'';position:absolute;left:18%;right:18%;bottom:3px;height:5px;background:linear-gradient(90deg,transparent,#c5a06b,transparent) center/100% 1px no-repeat;opacity:0;transition:opacity .18s;pointer-events:none}
+.navpill nav a::before{content:'◆';position:absolute;bottom:0;left:50%;transform:translateX(-50%);font-size:7px;line-height:10px;color:#e0be85;opacity:0;transition:opacity .18s;pointer-events:none}
+.navpill nav a:hover::before,.navpill nav a:hover::after,.navpill nav a.on::before,.navpill nav a.on::after{opacity:1}
+.navpill nav a:focus-visible{outline:1px solid #d3b17d;outline-offset:2px;border-radius:14px;color:#f3d6a0}
+.navpill .btn.sm:focus-visible{outline:2px solid #f3d6a0;outline-offset:4px}
+@media(max-width:760px){.navpill .btn.sm{min-height:44px;padding:10px 17px;font-size:15px}}
+@media(prefers-reduced-motion:reduce){.navpill nav a,.navpill nav a::before,.navpill nav a::after{transition:none}}
