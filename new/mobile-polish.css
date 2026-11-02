@@ -339,3 +339,16 @@ html{scroll-padding-top:calc(var(--nav-height,120px) + 16px)}
 .hero-art{-webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);mask-image:linear-gradient(to bottom,#000 78%,transparent 100%)}
 .hero .wrap{margin-top:-56px;position:relative;z-index:1}
 @media(max-width:820px){.hero .wrap{margin-top:-28px}}
+
+/* Calligraphic gold title: luminous faces, fine engraved depth, generous swashes. */
+.hero .strap{max-width:1100px;white-space:normal;padding:12px 18px 65px;overflow:visible}
+.hero .flourished-title{
+  display:block;font-family:'Snell Roundhand','Apple Chancery','URW Chancery L',cursive;
+  font-style:normal;font-weight:500;font-size:clamp(42px,6.8vw,88px);line-height:1.45;
+  letter-spacing:-.025em;text-wrap:balance;
+  background:linear-gradient(175deg,#fff9e4 8%,#f8df9e 29%,#b58843 43%,#fff1c4 48%,#e8c279 66%,#a77b38 86%,#f8df9e);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  text-shadow:none;filter:drop-shadow(0 1px 0 #6d461c) drop-shadow(0 3px 2px #000) drop-shadow(0 0 14px #c6943b26);
+}
+.hero .strap:after{width:min(82%,480px);height:36px;bottom:8px}
+@media(max-width:560px){.hero .strap{padding:8px 8px 54px}.hero .flourished-title{font-size:clamp(40px,9vw,52px);line-height:1.35}}
