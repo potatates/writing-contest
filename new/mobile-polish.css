@@ -332,3 +332,10 @@ html{scroll-padding-top:calc(var(--nav-height,120px) + 16px)}
 .hero .strap:before{display:none}
 .hero .strap:after{display:block;top:auto;bottom:6px;rotate:0deg}
 @media(max-width:560px){.hero .strap{padding:6px 6px 50px}}
+
+/* Hero blends into the black page: faded banner edge, same background as the sections. */
+.hero.band,.hero{background:#000!important;background-image:none!important}
+.hero.curve-b::after,.hero.curve-b::before{display:none!important}
+.hero-art{-webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);mask-image:linear-gradient(to bottom,#000 78%,transparent 100%)}
+.hero .wrap{margin-top:-56px;position:relative;z-index:1}
+@media(max-width:820px){.hero .wrap{margin-top:-28px}}
