@@ -216,3 +216,14 @@ html{scroll-padding-top:calc(var(--nav-height,120px) + 16px)}
   .hero .cta{gap:30px;margin-top:34px}
   .hero .btn,.final .btn{min-height:70px;font-size:17px;padding:21px 24px;letter-spacing:.035em}
 }
+
+/* Equal action frames; reserve space for the integrated jewelry. */
+.hero .cta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;width:100%;max-width:620px;margin:38px auto 28px;padding:14px 0}
+.hero .cta .btn,.final .btn{box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:100%;min-width:0;height:78px;min-height:78px;margin:0;padding:18px 20px;font-size:17px;line-height:1.25;letter-spacing:.025em;white-space:nowrap;border-radius:40px;border:2px solid #e5c697}
+.hero .cta .btn{align-self:center}
+.final .btn{display:inline-flex;width:280px;max-width:100%;margin:26px 0 24px}
+.hero .cta .btn.pop,.final .btn.pop{background:radial-gradient(ellipse at 50% 8%,#e68b9755,transparent 55%),linear-gradient(180deg,#92354c 0%,#581329 48%,#37091a 52%,#6f2038 100%);box-shadow:0 2px 0 #fff0cd,inset 0 2px 2px #fff1c7aa,inset 0 0 0 3px #31131b,inset 0 0 0 5px #a77f52,inset 0 7px 8px #f0b5a42b,inset 0 -5px 8px #120208aa,0 5px 0 #533426,0 8px 0 #140b0b,0 14px 20px #0008}
+.hero .cta .btn.line{background:radial-gradient(ellipse at 50% 8%,#b6a49333,transparent 55%),linear-gradient(180deg,#34272c,#130e13 50%,#09070a 52%,#291a23);box-shadow:0 2px 0 #fff0cd,inset 0 2px 2px #fff1c7aa,inset 0 0 0 3px #171015,inset 0 0 0 5px #a77f52,inset 0 7px 8px #f0b5a41c,inset 0 -5px 8px #000b,0 5px 0 #533426,0 8px 0 #140b0b,0 14px 20px #0008}
+.hero .cta .btn::before,.final .btn::before{top:-19px;width:96px;height:38px;z-index:1;filter:drop-shadow(0 2px 0 #382319) drop-shadow(0 3px 2px #000b)}
+.hero .cta .btn::after,.final .btn::after{bottom:-15px;width:70px;height:28px;z-index:1}
+@media(max-width:600px){.hero .cta{grid-template-columns:1fr;max-width:340px;gap:42px;padding:12px 0;margin-top:28px}.hero .cta .btn,.final .btn{height:76px;min-height:76px;font-size:18px}.final .btn{width:340px}}
