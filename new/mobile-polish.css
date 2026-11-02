@@ -1,3 +1,4 @@
+@font-face{font-family:'Contest Calligraphy';src:url('fonts/great-vibes.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
 /* Shared black, crimson and warm-gold palette for every awards surface. */
 #prizes{--body:Georgia,'Times New Roman',serif;--bg:#000;--surface:#141011;--fg:#f6ede4;--muted:#d8c6bc;--line:#674047;--soft:#140b0e;--card-border:#7d414b;--accent:#ecc69b;--accent-soft:#35161e;--pop:#d33d51;--pop-soft:#35161e;--pop-fg:#fff0e6;--pop-line:#8f3b4c;--on-band-pop:#f4c6a7;--on-band-muted:#dfc9bf}
 #prizes .award-tabs button{background:#100c0d;border-color:#75414b;color:#ead8cf}
@@ -343,8 +344,8 @@ html{scroll-padding-top:calc(var(--nav-height,120px) + 16px)}
 /* Calligraphic gold title: luminous faces, fine engraved depth, generous swashes. */
 .hero .strap{max-width:1100px;white-space:normal;padding:12px 18px 65px;overflow:visible}
 .hero .flourished-title{
-  display:block;font-family:'Snell Roundhand','Apple Chancery','URW Chancery L',cursive;
-  font-style:normal;font-weight:500;font-size:clamp(42px,6.8vw,88px);line-height:1.45;
+  display:block;font-family:'Contest Calligraphy',cursive;
+  font-style:normal;font-weight:400;font-size:clamp(42px,6.8vw,88px);line-height:1.45;
   letter-spacing:-.025em;text-wrap:balance;
   background:linear-gradient(175deg,#fff9e4 8%,#f8df9e 29%,#b58843 43%,#fff1c4 48%,#e8c279 66%,#a77b38 86%,#f8df9e);
   -webkit-background-clip:text;background-clip:text;color:transparent;
