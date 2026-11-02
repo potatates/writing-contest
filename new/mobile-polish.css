@@ -1,0 +1,143 @@
+/* Shared black, crimson and warm-gold palette for every awards surface. */
+#prizes{--body:Georgia,'Times New Roman',serif;--bg:#000;--surface:#141011;--fg:#f6ede4;--muted:#d8c6bc;--line:#674047;--soft:#140b0e;--card-border:#7d414b;--accent:#ecc69b;--accent-soft:#35161e;--pop:#d33d51;--pop-soft:#35161e;--pop-fg:#fff0e6;--pop-line:#8f3b4c;--on-band-pop:#f4c6a7;--on-band-muted:#dfc9bf}
+#prizes .award-tabs button{background:#100c0d;border-color:#75414b;color:#ead8cf}
+#prizes .award-tabs button span{color:#dfc9bf}
+#prizes .award-tabs button[aria-selected=true]{background:#3a111b;border-color:#d7ab75;box-shadow:inset 0 -4px #d7ab75;color:#ffe7bb}
+#prizes .award-track{background:#080606;border-color:#75414b}
+#prizes .award-track>.sub .cnt{background:#35161e;color:#f4dbc0}
+#prizes .prize-podium{border-color:#a66e57;background:radial-gradient(ellipse at 50% 38%,#8a243d55,transparent 65%),linear-gradient(120deg,#10090b,#341019 50%,#10090b);box-shadow:inset 0 0 0 5px #1b0c10,inset 0 0 0 6px #d4ad742b}
+#prizes .prize-podium:before{filter:sepia(1) saturate(.6)}
+#prizes .podium-award h4,#prizes .podium-money{color:#f4dfc5;text-shadow:0 0 12px #a85b352f}
+#prizes .podium-main h4,#prizes .podium-main .podium-money{color:#ffe2a6;text-shadow:0 0 22px #d89b4b55}
+#prizes .podium-main img{filter:drop-shadow(0 0 24px #e0af6544) drop-shadow(0 10px 12px #0008)}
+#prizes .podium-winners,#prizes .podium-perks{color:#f1e1d5;font-size:16px}
+#prizes .podium-perks{border-color:#ba8d6366}
+#prizes .award-extras{border-color:#75414b}
+#prizes .extras-heading p,#prizes .special-award p,#prizes .coffee-reward p{color:#dfc9bf}
+#prizes .special-award,#prizes .minor>div{background:linear-gradient(135deg,#271117,#100b0d);border-color:#75414b;box-shadow:none}
+#prizes .special-award h5,#prizes .minor strong,#prizes .coffee-reward h4{color:#f4dfc5;text-shadow:none}
+#prizes .award-cash,#prizes .coffee-reward .award-cash{color:#f5d6a1;text-shadow:none}
+#prizes .award-cash small{font:400 16px/1.4 Georgia,serif;color:#e5d1bf}
+#prizes .award-places{font-size:16px;color:#e6c7b6;letter-spacing:.05em}
+#prizes .track-label,#prizes .coffee-reward .track-label{background:#28141a;border-color:#855340;color:#efcfaa;font:400 16px/1.4 Georgia,serif;letter-spacing:.02em}
+#prizes .coffee-reward{background:linear-gradient(110deg,#26160f,#100a0c);border-color:#986949;box-shadow:none}
+#prizes .minor>div>b{color:#f5d6a1}
+
+/* Comfortable reading sizes and consistent alignment on phones. */
+@media(max-width:760px){
+  html{scroll-padding-top:148px}
+  .navpill{min-height:0;padding:10px 0 6px;gap:8px 10px}
+  .navpill .brand{gap:8px}
+  .brand-copy{gap:4px}
+  .brand-eyebrow{font:400 12px/1.3 Georgia,serif;letter-spacing:.04em}
+  .brand-title{font-size:16px;line-height:1.2;white-space:normal;max-width:230px}
+  .brand .mk svg{width:22px;height:28px}
+  .navpill .btn.sm{font-size:16px;min-height:44px;min-width:0;padding:10px 13px;margin:0;text-transform:none;letter-spacing:0}
+  .navpill nav{width:100%;justify-content:space-between;gap:0;overflow-x:auto;scrollbar-width:thin}
+  .navpill nav a{font-size:14px;line-height:1.3;text-transform:none;letter-spacing:0;padding:12px 5px;min-height:44px;flex:none;display:flex;align-items:center;justify-content:center}
+  .hero .kicker{font-size:14px;line-height:1.6;letter-spacing:.07em}
+  .hero-overline{font-size:14px;letter-spacing:.06em;line-height:1.5;margin:16px 0}
+  .hero-award>span{font:400 16px/1.4 Georgia,serif;letter-spacing:.1em}
+  .hero .cta{display:grid;grid-template-columns:1fr;gap:12px;max-width:360px;margin:24px auto 0}
+  .hero .btn,.final .btn{font-size:17px;white-space:normal;line-height:1.4;min-height:48px;padding:13px 18px}
+  .glance .row{gap:7px}
+  .glance dt{font-size:17px;line-height:1.4}
+  .glance dd,.glance .big{font-size:24px;line-height:1.3}
+  .count{font-size:16px;line-height:1.6}
+  #about .journey-label{font-size:16px}
+  #about .story-paths li{min-width:0}
+  #calendar .track .th,#calendar .track.long .th{padding:18px}
+  #calendar .track .in{padding:0 18px 16px}
+  #calendar .when li{grid-template-columns:minmax(0,1fr) auto;gap:10px}
+  #calendar .when li span{font-size:16px;line-height:1.4}
+  #calendar .when li b{font-size:17px;line-height:1.4}
+  #calendar .when .deadline b{font-size:20px}
+  #calendar .calendar-start .ol{text-transform:lowercase}
+  #prizes .award-tabs button{font-size:22px;line-height:1.25;padding:16px 12px;min-width:0}
+  #prizes .award-tabs button span{font-size:16px;line-height:1.4}
+  #prizes .award-track>.sub{align-items:flex-start;gap:10px}
+  #prizes .award-track>.sub h3{font-size:32px;line-height:1.2}
+  #prizes .special-award{grid-template-columns:60px minmax(0,1fr);gap:5px 12px;padding:16px}
+  #prizes .special-award>img{width:60px;height:80px;align-self:center}
+  #prizes .special-award h5{font-size:22px;line-height:1.3;overflow-wrap:break-word}
+  #prizes .special-award .award-cash{font-size:30px;line-height:1.25}
+  #prizes .coffee-reward{display:grid;grid-template-columns:65px minmax(0,1fr);gap:14px;padding:16px}
+  #prizes .coffee-reward>img{width:65px;height:85px}
+  #prizes .coffee-reward h4{font-size:25px}
+  #prizes .minor>div{grid-template-columns:65px minmax(0,1fr);gap:6px 12px;padding:16px}
+  #prizes .minor-award-art{width:65px;height:85px}
+  #prizes .minor strong{font-size:20px;line-height:1.4}
+  #prizes .minor>div>span{font-size:17px;line-height:1.6}
+  .rules li{padding:20px 18px;grid-template-columns:32px minmax(0,1fr);gap:12px}
+  .rules h3{font-size:17px;line-height:1.4;letter-spacing:.04em;margin-top:3px}
+  .rules p{font-size:18px;line-height:1.65}
+  #inspiration .genre-count{font-size:16px}
+  #inspiration .genre-fold>summary{grid-template-columns:minmax(0,1fr) auto 20px;gap:8px 12px}
+  #inspiration .genre-title{font-size:23px;line-height:1.3}
+  #inspiration .genre-intro .gd{font-size:18px}
+  #inspiration .prompt .pn{font-size:34px}
+  #inspiration .prompt-heading{align-items:flex-start;gap:12px}
+  #inspiration .prompt h4{font-size:24px;line-height:1.25}
+  #inspiration .prompt .pt{font-size:16px;line-height:1.5;letter-spacing:0}
+  #inspiration .prompt p{font-size:18px;line-height:1.65}
+  #inspiration .notice{padding:18px 16px;gap:10px;font-size:17px;line-height:1.65}
+  .partner{padding:24px 18px}
+  .partner .logos{gap:16px}
+  .partner .logo,.partner .logo.light{min-width:0;width:100%;padding:10px}
+  .partner .logo:first-child{width:100%;max-width:220px;justify-self:center}
+  .partner p,.final p{font-size:18px;line-height:1.65}
+  footer{font-size:16px;line-height:1.6}
+  #partners{scroll-margin-top:148px}
+}
+@media(max-width:360px){
+  .wrap{padding-left:16px;padding-right:16px}
+  .brand-title{font-size:15px}
+  .navpill nav{justify-content:flex-start}
+  .navpill nav a{padding-inline:6px}
+  #prizes .award-tabs{gap:8px}
+  #prizes .award-tabs button{font-size:20px}
+  #prizes .prize-podium{gap:5px;padding-inline:6px}
+  #prizes .podium-award h4{font-size:18px}
+  #prizes .podium-main h4{font-size:23px}
+  #prizes .podium-money{font-size:23px}
+  #prizes .podium-main .podium-money{font-size:30px}
+  #calendar .track .in{padding-inline:14px}
+  #calendar .when .deadline{margin-left:-10px;padding-left:7px}
+}
+/* Keep mobile prize details readable beneath the shared trophy composition. */
+#prizes .podium-benefits{display:none}
+html{scroll-padding-top:calc(var(--nav-height,120px) + 16px)}
+.genre,.prompt,#long-special-awards,#long-monthly-reward,#partners{scroll-margin-top:0}
+@media(max-width:600px){
+  #prizes .podium-award .podium-perks{display:none}
+  #prizes .podium-benefits{display:block;grid-column:1 / -1;margin:12px 4px 0;padding-top:6px;border-top:1px solid #ba8d6366;text-align:left}
+  #prizes .podium-benefits>div{display:grid;grid-template-columns:1fr 1.2fr;gap:12px;padding:9px 4px}
+  #prizes .podium-benefits dt,#prizes .podium-benefits dd{font:400 16px/1.45 Georgia,serif;color:#f3dfc5;margin:0}
+  #prizes .podium-benefits dd{text-align:right;color:#f1e1d5}
+  #prizes .podium-money{font-size:clamp(22px,6vw,35px)}
+  #prizes .podium-main .podium-money{font-size:clamp(28px,8vw,48px)}
+}
+@media(max-width:480px){
+  #prizes .prize-podium{margin-inline:-6px;grid-template-columns:1fr 1.5fr 1fr;padding-inline:5px;gap:4px}
+  #prizes .podium-award h4{font-size:18px}
+  #prizes .podium-main h4{font-size:24px}
+  #inspiration .genre-fold>summary{grid-template-columns:minmax(0,1fr) 24px}
+  #inspiration .genre-fold>summary:after{grid-column:2}
+  #inspiration .genre-title{grid-column:1;grid-row:1}
+  #inspiration .genre-count{grid-column:1;grid-row:2}
+  #inspiration .genre-topics{grid-row:3}
+}
+@media(max-width:360px){
+  .navpill nav{flex-wrap:wrap;justify-content:space-between;overflow:visible}
+  .navpill nav a{padding-inline:1px}
+  #prizes .podium-money{font-size:22px}
+  #prizes .podium-main .podium-money{font-size:28px}
+}
+/* Warm trophy accents match the crimson frame without changing the source artwork. */
+#prizes .podium-main img[src*="prize-trophy"]{filter:hue-rotate(75deg) drop-shadow(0 0 24px #e0af6544) drop-shadow(0 10px 12px #0008)}
+#prizes .special-award>img{filter:sepia(.75) saturate(.8) drop-shadow(0 3px 8px #c79c6544)}
+@media(max-width:360px){
+  .navpill nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px 6px}
+  .navpill nav a{padding:10px 4px}
+}
+@media(max-width:760px){.brand-eyebrow{font-size:14px}}
