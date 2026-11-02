@@ -232,7 +232,7 @@ html{scroll-padding-top:calc(var(--nav-height,120px) + 16px)}
 .hero .cta .btn,.final .btn{
   font-family:Didot,'Bodoni 72','Times New Roman',serif;
   font-weight:400;font-size:20px;letter-spacing:.045em;
-  text-transform:none;line-height:1.2;color:#faead0;
+  text-transform:uppercase;line-height:1.2;color:#faead0;
   text-shadow:0 1px 1px #16080b;
   -webkit-font-smoothing:antialiased;
 }
