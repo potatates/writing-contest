@@ -135,7 +135,7 @@ html{scroll-padding-top:calc(var(--nav-height,120px) + 16px)}
 }
 /* Warm trophy accents match the crimson frame without changing the source artwork. */
 #prizes .podium-main img[src*="prize-trophy"]{filter:hue-rotate(75deg) drop-shadow(0 0 24px #e0af6544) drop-shadow(0 10px 12px #0008)}
-#prizes .special-award>img{filter:sepia(.75) saturate(.8) drop-shadow(0 3px 8px #c79c6544)}
+#prizes .special-award>img{filter:drop-shadow(0 3px 8px #bc8ad344)}
 @media(max-width:360px){
   .navpill nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px 6px}
   .navpill nav a{padding:10px 4px}
