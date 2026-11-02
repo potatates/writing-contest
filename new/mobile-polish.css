@@ -183,3 +183,36 @@ html{scroll-padding-top:calc(var(--nav-height,120px) + 16px)}
   #partners .logo,#partners .logo:first-child{height:60px;padding:12px 8px}
   #partners .logo img,#partners .logo:first-child img{max-height:27px}
 }
+
+/* Jeweled, double-framed actions inspired by the supplied reference. */
+.hero .cta{gap:24px;margin-top:32px;margin-bottom:18px}
+.hero .btn,.final .btn{
+  position:relative;isolation:isolate;overflow:visible;
+  min-height:76px;padding:22px 34px;border:2px solid #e9cc97;border-radius:44px;
+  font-family:Georgia,'Times New Roman',serif;font-size:19px;font-weight:400;
+  letter-spacing:.055em;text-transform:uppercase;color:#fff0d5;
+  text-shadow:0 2px 2px #120306;
+}
+.hero .btn.pop,.final .btn.pop{
+  background:radial-gradient(ellipse at 50% 0,#dc667545,transparent 62%),linear-gradient(160deg,#741e34,#3e0c1d 65%,#812c3d);
+  border-color:#efd3a2;
+  box-shadow:inset 0 0 0 3px #2a1017,inset 0 0 0 4px #bb9568,inset 0 0 0 7px #4e2030,inset 0 0 22px #f1957333,0 0 0 1px #70503c,0 5px 18px #0008;
+}
+.hero .btn.line{
+  background:radial-gradient(ellipse at 50% 0,#ae866b20,transparent 65%),linear-gradient(150deg,#23191a,#0c090b 65%,#2d1b20);
+  color:#f4dfbb;border-color:#d6bc90;
+  box-shadow:inset 0 0 0 3px #100b0d,inset 0 0 0 4px #9c805d,inset 0 0 0 7px #23171b,0 0 0 1px #70503c,0 5px 18px #0008;
+}
+.hero .btn::before,.hero .btn::after,.final .btn::before,.final .btn::after{
+  content:'';display:block;position:absolute;left:50%;right:auto;top:-21px;
+  width:104px;height:40px;transform:translateX(-50%);pointer-events:none;
+  background:url('button-jewel.svg') center/contain no-repeat;filter:drop-shadow(0 2px 2px #0009);
+}
+.hero .btn::after,.final .btn::after{top:auto;bottom:-17px;width:76px;height:30px;transform:translateX(-50%) rotate(180deg)}
+.hero .btn.pop:hover,.final .btn.pop:hover{background:radial-gradient(ellipse at 50% 0,#ed889c55,transparent 65%),linear-gradient(160deg,#922c47,#571028 65%,#963d50);box-shadow:inset 0 0 0 3px #2a1017,inset 0 0 0 4px #e1bb83,inset 0 0 0 7px #4e2030,0 0 20px #d94b6433,0 6px 20px #0008}
+.hero .btn.line:hover{background:linear-gradient(150deg,#39252a,#170d12 65%,#38242a)}
+.final .btn{margin-top:12px;margin-bottom:18px}
+@media(max-width:600px){
+  .hero .cta{gap:30px;margin-top:34px}
+  .hero .btn,.final .btn{min-height:70px;font-size:17px;padding:21px 24px;letter-spacing:.035em}
+}
