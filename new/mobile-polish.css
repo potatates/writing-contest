@@ -141,3 +141,10 @@ html{scroll-padding-top:calc(var(--nav-height,120px) + 16px)}
   .navpill nav a{padding:10px 4px}
 }
 @media(max-width:760px){.brand-eyebrow{font-size:14px}}
+
+/* Keep the full contest introduction comfortable to read on every screen. */
+#about .about-copy{max-width:860px;margin:0 auto}
+#about .about-copy p{margin:0 0 1.3em;font-size:20px;line-height:1.7}
+#about .about-copy p:last-child{margin-bottom:0}
+#about .about-copy strong{color:var(--cream,#f3e3cf);font-weight:700}
+@media(max-width:600px){#about .about-copy p{font-size:18px;line-height:1.65}}
