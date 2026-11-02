@@ -227,3 +227,13 @@ html{scroll-padding-top:calc(var(--nav-height,120px) + 16px)}
 .hero .cta .btn::before,.final .btn::before{top:-19px;width:96px;height:38px;z-index:1;filter:drop-shadow(0 2px 0 #382319) drop-shadow(0 3px 2px #000b)}
 .hero .cta .btn::after,.final .btn::after{bottom:-15px;width:70px;height:28px;z-index:1}
 @media(max-width:600px){.hero .cta{grid-template-columns:1fr;max-width:340px;gap:42px;padding:12px 0;margin-top:28px}.hero .cta .btn,.final .btn{height:76px;min-height:76px;font-size:18px}.final .btn{width:340px}}
+
+/* Refined lettering balances the ornate metallic frames. */
+.hero .cta .btn,.final .btn{
+  font-family:Didot,'Bodoni 72','Times New Roman',serif;
+  font-weight:400;font-size:20px;letter-spacing:.045em;
+  text-transform:none;line-height:1.2;color:#faead0;
+  text-shadow:0 1px 1px #16080b;
+  -webkit-font-smoothing:antialiased;
+}
+@media(max-width:600px){.hero .cta .btn,.final .btn{font-size:22px;letter-spacing:.035em}}
