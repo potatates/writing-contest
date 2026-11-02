@@ -326,3 +326,9 @@ html{scroll-padding-top:calc(var(--nav-height,120px) + 16px)}
 .hero .strap:before{top:6px}
 @media(min-width:900px){.hero .strap{white-space:nowrap}}
 @media(max-width:560px){.hero .strap{font-size:40px;padding:50px 6px 4px}}
+
+/* Slogan first, then divider, then total. */
+.hero .strap{margin:6px auto 0;padding:6px 12px 54px}
+.hero .strap:before{display:none}
+.hero .strap:after{display:block;top:auto;bottom:6px;rotate:0deg}
+@media(max-width:560px){.hero .strap{padding:6px 6px 50px}}
