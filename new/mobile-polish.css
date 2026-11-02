@@ -269,3 +269,9 @@ html{scroll-padding-top:calc(var(--nav-height,120px) + 16px)}
 .navpill .btn.sm:focus-visible{outline:2px solid #f3d6a0;outline-offset:4px}
 @media(max-width:760px){.navpill .btn.sm{min-height:44px;padding:10px 17px;font-size:15px}}
 @media(prefers-reduced-motion:reduce){.navpill nav a,.navpill nav a::before,.navpill nav a::after{transition:none}}
+
+/* Hover previews a link; the persistent marker identifies the current section. */
+.navpill nav a:hover:not(.on){color:#f5e9db;text-shadow:none}
+.navpill nav a:hover:not(.on)::before,.navpill nav a:hover:not(.on)::after{opacity:0}
+.navpill nav a.on,.navpill nav a.on:hover{color:#f3d6a0;text-shadow:0 0 12px #d4a35f33}
+.navpill nav a.on::before,.navpill nav a.on::after{opacity:1}
