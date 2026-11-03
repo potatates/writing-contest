@@ -370,3 +370,42 @@ html{scroll-padding-top:calc(var(--nav-height,120px) + 16px)}
 .share-toast.on{opacity:1;translate:-50% 0}
 @media(max-width:560px){.share-float{top:auto;bottom:calc(20px + env(safe-area-inset-bottom,0px));translate:none;gap:10px}.share-btn{width:44px;height:44px}.share-btn svg{width:20px;height:20px}}
 @media(prefers-reduced-motion:reduce){.share-btn,.share-toast{transition:none}}
+
+/* ---- Acquisition Editor benefits ---- */
+#ae .head{margin-bottom:34px}
+.ae-card{background:#111;border:1px solid #9e3b4d;border-radius:10px;box-shadow:0 10px 30px #0003}
+.ae-card h3{font-family:var(--serif);font-weight:400;font-size:clamp(24px,3vw,29px);color:#f2d79b;margin:0 0 10px}
+.ae-resp,.ae-bonus{padding:26px 30px;margin:0 0 6px}
+.ae-resp p{margin:0;font-size:18px;color:#f5f5f5}
+.ae-sub{font-family:var(--serif);font-weight:400;font-size:clamp(24px,3vw,29px);color:#f2d79b;margin:30px 0 14px}
+.ae-table-wrap{overflow:hidden}
+.ae-table{width:100%;border-collapse:collapse;min-width:0}
+.ae-table th,.ae-table td{padding:20px 26px;text-align:left;border-bottom:1px solid #3f3f47;vertical-align:middle}
+.ae-table thead th{font:700 13px/1.3 Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#d9c6c8;background:#1a1214;border-bottom:1px solid #9e3b4d}
+.ae-table tbody tr:last-child th,.ae-table tbody tr:last-child td{border-bottom:0}
+.ae-table tbody th{font:400 clamp(21px,2.4vw,26px)/1.2 var(--serif);color:#f5e5d6}
+.ae-table td{font-size:16px;color:#d9d3d4}
+.ae-table td b{font:700 clamp(26px,3vw,34px)/1 Didot,'Bodoni 72',Georgia,serif;color:#f6e6bd;margin-right:4px}
+.ae-table td.main{background:linear-gradient(135deg,#2a171b,#171012)}
+.ae-table td.main b{color:#ffdc8f;text-shadow:0 0 18px #d9a85a44}
+.ae-table .none{font-size:26px;color:#8c7f82}
+.ae-rules{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:12px}
+.ae-rules li{position:relative;padding-left:30px;font-size:17px;color:#f5f5f5}
+.ae-rules li:before{content:"";position:absolute;left:4px;top:.62em;width:9px;height:9px;rotate:45deg;background:linear-gradient(135deg,#fffbed,#cdb7b0 55%,#8d7a76);box-shadow:0 0 6px #e8d3cc55}
+.ae-notice p{margin:0 0 8px;font-size:17px}
+.ae-notice p:last-child{margin:0}
+#ae .notice-title{margin:34px 0 12px}
+#ae .submit-row{margin:38px 0 4px}
+@media(max-width:700px){
+  .ae-resp,.ae-bonus{padding:22px 20px}
+  .ae-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .ae-table,.ae-table tbody,.ae-table tr,.ae-table th,.ae-table td{display:block;width:100%}
+  .ae-table tbody tr{padding:6px 0 10px;border-bottom:1px solid #9e3b4d}
+  .ae-table tbody tr:last-child{border-bottom:0}
+  .ae-table tbody th{border:0;padding:16px 20px 4px}
+  .ae-table td{display:flex;justify-content:space-between;align-items:baseline;gap:14px;border:0;padding:10px 20px}
+  .ae-table td:before{content:attr(data-label);font:700 12px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#d9c6c8}
+  .ae-table td.main{background:none}
+}
+#ae .submit-row.final{background:transparent!important;border:0}
+@media(max-width:700px){.ae-table td{justify-content:flex-start}.ae-table td:before{flex:0 0 140px}}
