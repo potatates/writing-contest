@@ -430,3 +430,16 @@ section#ae.ae-section{padding-top:150px}
 @media(max-width:560px){section#ae.ae-section{padding-top:120px}}
 section#ae.ae-section{padding-top:150px!important;padding-bottom:20px!important}
 @media(max-width:560px){section#ae.ae-section{padding-top:120px!important}}
+
+/* ---- Spacing audit fixes ---- */
+.ae-bonus{margin-top:18px}
+.ae-resp{margin-bottom:0}
+.ae-table .none{line-height:1}
+#ae .notice-title{margin:34px 0 14px}
+.notice-title{margin-bottom:14px}
+footer .wrap{justify-content:center;text-align:center}
+@media(max-width:560px){
+  #prizes .podium-main img{width:112%;margin-left:-6%;margin-right:-6%}
+  #prizes .podium-award:not(.podium-main) img{height:80px}
+  #prizes .podium-award h4{font-size:19px}
+}
