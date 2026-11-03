@@ -443,3 +443,75 @@ footer .wrap{justify-content:center;text-align:center}
   #prizes .podium-award:not(.podium-main) img{height:80px}
   #prizes .podium-award h4{font-size:19px}
 }
+
+/* ---- Folded menu on phones and small tablets ---- */
+.menu-btn{display:none}
+@media(max-width:1020px){
+  .nav .wrap{position:static}
+  .navpill{display:flex;flex-wrap:nowrap;height:auto;min-height:64px;padding:8px 0;gap:10px}
+  .navpill .brand{min-width:0;padding-right:0;margin-right:auto}
+  .brand-title{max-width:none}
+  .navpill .btn.sm{flex:none;margin:0;grid-area:auto}
+  .menu-btn{flex:none;display:grid;place-items:center;width:44px;height:44px;padding:0;border:1px solid #9e795580;border-radius:12px;background:#140b0e;color:#f3d6a0;cursor:pointer}
+  .menu-btn span,.menu-btn span:before,.menu-btn span:after{display:block;width:20px;height:2px;border-radius:2px;background:currentColor;transition:transform .2s,background .2s}
+  .menu-btn span{position:relative}
+  .menu-btn span:before,.menu-btn span:after{content:'';position:absolute;left:0}
+  .menu-btn span:before{top:-6px}
+  .menu-btn span:after{top:6px}
+  .nav.open .menu-btn span{background:transparent}
+  .nav.open .menu-btn span:before{transform:translateY(6px) rotate(45deg)}
+  .nav.open .menu-btn span:after{transform:translateY(-6px) rotate(-45deg)}
+  .menu-btn:focus-visible{outline:2px solid #f3d6a0;outline-offset:3px}
+  .navpill nav,.navpill nav[id]{display:none;position:absolute;left:0;right:0;top:100%;width:auto;margin:0;padding:8px max(20px,env(safe-area-inset-left,0px)) 18px;overflow:visible;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;background:#0b0708;border-bottom:1px solid #75414b;box-shadow:0 18px 30px #000a;max-height:calc(100dvh - 100%);overflow-y:auto}
+  .nav.open .navpill nav{display:flex}
+  .navpill nav>a,.navpill nav>a:hover,.navpill nav>a.on{display:flex;align-items:center;justify-content:flex-start;white-space:normal;padding:14px 4px;min-height:48px;font-size:18px;text-transform:none;letter-spacing:.01em;border-bottom:1px solid #2a1a1d}
+  .navpill nav a::before,.navpill nav a::after{display:none}
+  .navpill nav a.on{color:#f3d6a0}
+  .navpill nav a:hover:not(.on){background:none}
+  .nav .share-float{position:static;translate:none;flex-direction:row;gap:12px;padding-top:16px}
+  .nav .share-float .share-btn,.nav .share-float .share-btn:hover{display:grid;width:44px;height:44px;min-height:0;padding:0;border:1.5px solid #e0c9a3;border-radius:50%;background:linear-gradient(145deg,#6a2338,#2a1015);color:#fff0dc}
+  .nav .share-float .share-btn::before,.nav .share-float .share-btn::after{display:none}
+}
+@media(max-width:480px){
+  .brand-eyebrow{display:none}
+  .brand-title{font-size:16px;line-height:1.25}
+  .navpill .btn.sm{padding:8px 14px;font-size:14px;min-height:40px}
+  .navpill .btn.sm::before{width:44px;height:18px;top:-9px}
+}
+
+/* ---- Phones: fewer nested boxes so text uses the full width ---- */
+@media(max-width:600px){
+  /* Rules: number sits beside the heading, paragraphs span the card. */
+  .rules li{display:grid;grid-template-columns:32px minmax(0,1fr);gap:0 12px;align-items:center;padding:18px 16px}
+  .rules li>div{display:contents}
+  .rules li h3{margin:0}
+  .rules li p{grid-column:1 / -1}
+  .rules li h3+p{margin-top:12px}
+
+  /* Inspiration notice: icon floats so the text wraps under it. */
+  #inspiration .notice{display:block;padding:16px}
+  #inspiration .notice .ic{float:left;margin:4px 10px 0 0}
+
+  /* Genre folds run edge to edge; prompts inside drop their own card frame. */
+  #inspiration .genre-fold{margin-inline:-20px;border-radius:0;border-left:0;border-right:0}
+  #inspiration .genre-fold>summary{padding:20px}
+  #inspiration .genre-content{padding:20px 0 0}
+  #inspiration .genre-intro{margin:0 20px 24px;padding:4px 0 4px 14px;background:none;border-radius:0}
+  #inspiration .prompt-list-label{margin-inline:20px}
+  #inspiration .prompts{gap:0}
+  #inspiration .prompts>.prompt{border:0;border-top:1px solid #3a2427;border-radius:0;box-shadow:none}
+  #inspiration .prompt-copy{padding:0 20px 32px}
+
+  /* AE list bullets need less indent. */
+  .ae-rules li{padding-left:22px}
+  .ae-rules li:before{left:2px}
+}
+@media(max-width:360px){
+  #inspiration .genre-fold{margin-inline:-16px}
+}
+
+/* ---- Wide screens: keep long prompt stories to a readable line length ---- */
+@media(min-width:901px){
+  #inspiration .prompt-copy{max-width:calc(760px + 2 * clamp(24px,5vw,64px));margin-inline:auto}
+  #inspiration .genre-intro .gd{max-width:72ch}
+}
