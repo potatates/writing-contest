@@ -418,3 +418,15 @@ html{scroll-padding-top:calc(var(--nav-height,120px) + 16px)}
 /* Submit, then AE benefits, then the contact line and partner logos. */
 .footer-cta .submit-row{margin-bottom:0}
 .footer-partner .contact-line{margin:10px 0 50px}
+
+/* Submit button sits near the inspiration cards, with more space before the AE section. */
+.footer-cta:not(.footer-partner){padding-top:0}
+.footer-cta:not(.footer-partner) .submit-row{margin-top:0}
+.ae-section{padding-top:110px}
+.footer-cta:not(.footer-partner){margin-top:-62px;position:relative;z-index:2}
+.ae-section{padding-top:176px}
+@media(max-width:560px){.footer-cta:not(.footer-partner){margin-top:-56px}.ae-section{padding-top:150px}}
+section#ae.ae-section{padding-top:150px}
+@media(max-width:560px){section#ae.ae-section{padding-top:120px}}
+section#ae.ae-section{padding-top:150px!important;padding-bottom:20px!important}
+@media(max-width:560px){section#ae.ae-section{padding-top:120px!important}}
