@@ -409,3 +409,8 @@ html{scroll-padding-top:calc(var(--nav-height,120px) + 16px)}
 }
 #ae .submit-row.final{background:transparent!important;border:0}
 @media(max-width:700px){.ae-table td{justify-content:flex-start}.ae-table td:before{flex:0 0 140px}}
+
+/* AE section sits on the same black as the page, between the submit area and the partner logos. */
+.ae-section{background:#000;padding:40px 0 20px}
+.footer-cta{padding-bottom:0}
+.footer-partner{padding-top:30px;padding-bottom:30px}
